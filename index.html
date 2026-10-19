@@ -19,7 +19,7 @@
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js';
 import {getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut} from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js';
 import {getFirestore,collection,addDoc,onSnapshot,query,orderBy,serverTimestamp} from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js';
-const firebaseConfig={apiKey:'AIzaSyAi3damER0It5ThsrOHa0DIeFALwZ7R7JU',authDomain:'piyasa-hafizasi.firebaseapp.com',projectId:'piyasa-hafizasi',storageBucket:'piyasa-hafizasi.firebasestorage.app',messagingSenderId:'474674792223',appId:'1:474674792223:web:ebe0ae666d1a206ba0d22a'};
+const firebaseConfig={apiKey:AIzaSyAi3damERO1t5ThsrOHa0DIeFALwZ7R7JU,authDomain:'piyasa-hafizasi.firebaseapp.com',projectId:'piyasa-hafizasi',storageBucket:'piyasa-hafizasi.firebasestorage.app',messagingSenderId:'474674792223',appId:'1:474674792223:web:ebe0ae666d1a206ba0d22a'};
 const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),$=id=>document.getElementById(id);
 let dir='',liq='',unsubscribe=null,entries=[];const nickKey='piyasa-hafizasi-v05-nick';$('nick').value=localStorage.getItem(nickKey)||'';
 function showError(e){const codes={'auth/invalid-credential':'E-posta veya şifre hatalı.','auth/email-already-in-use':'Bu e-posta zaten kayıtlı.','auth/weak-password':'Şifre en az 6 karakter olmalı.','auth/invalid-email':'Geçerli bir e-posta gir.','auth/too-many-requests':'Çok fazla deneme yapıldı. Bir süre bekle.','permission-denied':'Veritabanı erişim izni reddedildi. Firebase kurallarını kontrol et.'};return codes[e.code]||e.message||'Bilinmeyen hata';}
